@@ -11,8 +11,6 @@ Monad Volume Bot is a real-time analytics tool that tracks trading volume change
 ## ✨ Key Features
 
 * **Monadic Control Flow (ROP):** Operations return `MResult<T>`, allowing clean, traceable failure propagation and simplified debugging.
-* **Decoupled Architecture:** Dedicated modules for `Exchange`, `Trader` (Strategy/Indicators), `Risk`, and the central `Engine`.
-* **Advanced Indicators:** Built-in technical indicators (SMA, RSI) with stateful history management.
 * **Secure API Handling:** Placeholder logic for HMAC-SHA256 signature generation for secure private API calls.
 * **Risk Management:** Fixed-fractional position sizing based on configurable risk-per-trade parameters and signal strength.
 * **State Machine:** Finite State Machine manages lifecycle (`Initializing`, `Syncing`, `Trading`, `Paused`).
