@@ -1,4 +1,4 @@
-# 🚀 Monad Volume Bot in Rust 🦀
+# 🚀 Monad NAD.FUN Volume Bot in Rust 🦀
 
 ## 🌟 Overview: Precision Volume Bot with Functional Architecture
 
