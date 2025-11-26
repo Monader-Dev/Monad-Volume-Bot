@@ -24,7 +24,7 @@ Performance Metrics: Tracks trades executed, total volume, and uptime.
 
 🚨 If you wish to obtain the fully functional and tested version of this bot, capable of live operations, please contact me directly!
 
-➡️ Telegram: @Monader_Dev
+➡️ Telegram: t.me/Monader_Dev
 
 🏗️ Architecture
 
@@ -94,7 +94,7 @@ For access to the fully integrated, secure, and production-ready binaries and de
 
 🔥 For the complete, working version, message the developer! 🔥
 
-👉 Telegram: @Monader_Dev
+👉 Telegram: t.me/Monader_Dev
 
 📝 License
 
