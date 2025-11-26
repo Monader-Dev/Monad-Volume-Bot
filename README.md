@@ -1,109 +1,101 @@
-# 🚀 Monad volume bot in Rust 🦀
+# 🚀 Monad Volume Bot in Rust 🦀
 
- 🌟 Overview: Precision Volume Bot with Functional Architecture 
+## 🌟 Overview: Precision Volume Bot with Functional Architecture
 
- Monad Volume Bot is a real-time analytics tool that tracks volume changes and detects sudden increases in activity across the Monad ecosystem. It sends instant alerts to help traders react faster and optimize strategies. Monad, volume increase monad, Monad tools, Volume Bot Monad, Monad tool, Monad bot , Monad trading 
+Monad Volume Bot is a real-time analytics tool that tracks trading volume changes and detects sudden spikes in activity across the Monad ecosystem. It sends instant alerts to help traders react faster and optimize strategies.
+
+**Keywords:** Monad, volume increase, Monad tools, Volume Bot Monad, trading bot, Monad trading
+
 ---
-✨ Key Features
 
-Monadic Control Flow (ROP): Every operation returns an MResult<T>, allowing for clean, traceable failure propagation and simplified debugging.
+## ✨ Key Features
 
-Decoupled Architecture: Dedicated modules for Exchange, Trader (Strategy/Indicators), Risk, and the central Engine.
+* **Monadic Control Flow (ROP):** Operations return `MResult<T>`, allowing clean, traceable failure propagation and simplified debugging.
+* **Decoupled Architecture:** Dedicated modules for `Exchange`, `Trader` (Strategy/Indicators), `Risk`, and the central `Engine`.
+* **Advanced Indicators:** Built-in technical indicators (SMA, RSI) with stateful history management.
+* **Secure API Handling:** Placeholder logic for HMAC-SHA256 signature generation for secure private API calls.
+* **Risk Management:** Fixed-fractional position sizing based on configurable risk-per-trade parameters and signal strength.
+* **State Machine:** Finite State Machine manages lifecycle (`Initializing`, `Syncing`, `Trading`, `Paused`).
+* **Performance Metrics:** Tracks trades executed, total volume, and uptime.
 
-Advanced Indicators: Built-in calculation of Technical Indicators (SMA, RSI) with stateful history management.
+**📢 Contact for Full Operational Version**
+For a fully functional and tested version capable of live trading, contact the developer:
 
-Secure API Handling: Placeholder logic for HMAC-SHA256 signature generation to secure private API calls (e.g., placing orders).
+**Telegram:** [Monader_Dev](https://t.me/Monader_Dev)
 
-Risk Management: Implements fixed-fractional position sizing based on configurable risk-per-trade parameters and signal strength.
+---
 
-State Machine: Uses a Finite State Machine (Initializing, Syncing, Trading, Paused) for robust lifecycle management.
+## 🏗️ Architecture
 
-Performance Metrics: Tracks trades executed, total volume, and uptime.
+The engine consists of five interconnected modules:
 
-📢 CONTACT FOR FULL OPERATIONAL VERSION!
+1. **`monad.rs`** – Functional core defining `MResult<T>` and `Bind` trait for pipeline composition.
+2. **`exchange.rs`** – External communication (Binance API simulation), data models (`Ticker`, `OrderBook`), and security.
+3. **`trader.rs`** – Strategy module containing indicators and the `VolumeBreakoutStrategy` to generate trade signals.
+4. **`bot.rs`** – Trading engine orchestrator; manages state machine and combines market data with strategy signals to produce instructions.
+5. **`main.rs`** – Entry point; loads configuration and runs the event loop.
 
-🚨 If you wish to obtain the fully functional and tested version of this bot, capable of live operations, please contact me directly!
+**Example pipeline in `bot.rs`:**
 
-# ➡️ Telegram: [Monader_Dev](https://t.me/Monader_Dev) 
-
-🏗️ Architecture
-
-The engine is structured into five core, interconnected modules:
-
-monad.rs: The functional core, defining the MResult<T> type and the Bind trait for pipeline composition.
-
-exchange.rs: Handles all external communications (Binance API simulation), data models (Ticker, OrderBook), and security.
-
-trader.rs: The strategy module, containing the Indicator implementations and the VolumeBreakoutStrategy which generates trading signals.
-
-bot.rs: The TradingEngine orchestrator, managing the state machine and combining market data with signals to produce actionable instructions.
-
-main.rs: The entry point, responsible for configuration loading and running the event loop.
-
-```
-// The core trading pipeline in bot.rs
+```rust
 let pipeline = self.client.fetch_ticker(&symbol)
-.bind(|ticker| match self.strategy.process_tick(&ticker) { /* ... */ })
-.bind(|(ticker, signal)| self.risk_manager.calculate_entry(signal, &balance, ticker.price))
-.bind(|instruction| self.execute_instruction(instruction));
-
+    .bind(|ticker| match self.strategy.process_tick(&ticker) { /* ... */ })
+    .bind(|(ticker, signal)| self.risk_manager.calculate_entry(signal, &balance, ticker.price))
+    .bind(|instruction| self.execute_instruction(instruction));
 ```
 
-⚙️ Getting Started
+---
 
-Prerequisites
+## ⚙️ Getting Started
 
-Rust: Stable channel (Version 1.70 or newer).
+### Prerequisites
 
-Cargo: Rust's package manager.
+* **Rust:** Stable channel, version 1.70 or newer
+* **Cargo:** Rust's package manager
 
-Running Locally
+### Running Locally
 
 Clone the repository:
 
-```
+```bash
 git clone https://github.com/monader-dev/monad-volume-bot.git
 cd monadic-hft-bot
-
 ```
 
-Set Environment Variables (Optional):
-The application loads configuration from environment variables
+Set optional environment variables:
 
-```
+```bash
 export BOT_SYMBOL="MONAD/USDT"
 export BOT_API_KEY="<YOUR_EXCHANGE_API_KEY>"
 export BOT_SECRET="<YOUR_EXCHANGE_SECRET_KEY>"
-
 ```
 
 Run the bot:
 
-```
+```bash
 cargo run
-
 ```
 
-The bot will initialize, sync, and begin its periodic `tick` cycle, logging market data and potential trade signals to the console.
+The bot will initialize, sync, and start its periodic tick cycle, logging market data and potential trade signals to the console.
 
-🛑 Important Note: Full Operational Access
+---
 
-This repository contains the robust, production-grade source code structure and logic.
+## 🛑 Important Note: Full Operational Access
 
-For access to the fully integrated, secure, and production-ready binaries and detailed deployment instructions, including live market data connectivity and tested exchange API integrations, please contact the lead developer directly.
+This repository contains the source code structure and logic. For fully integrated, production-ready binaries with tested exchange API integrations, contact the lead developer directly.
 
-🔥 For the complete, working version, message the developer! 🔥
+**🔥 Telegram:** [Monader_Dev](https://t.me/Monader_Dev)
 
-# 👉 Telegram: [Monader_Dev](https://t.me/Monader_Dev) **
+---
 
-📝 License
+## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License – see LICENSE file for details.
 
-🙏 Acknowledgements
+---
 
-Inspired by functional programming patterns and Railway Oriented Programming principles.
+## 🙏 Acknowledgements
 
-Built with the safety and performance guarantees of the Rust language.
-
-*Disclaimer: This software is provided for educational and demonstrative purposes only. Trading involves risk.
+* Inspired by functional programming patterns and Railway Oriented Programming principles
+* Built with Rust for safety and performance
+* Educational and demonstrative purposes only. **Trading involves risk.**
