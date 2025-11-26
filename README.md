@@ -1,9 +1,9 @@
-🚀 Monad volume bot in Rust 🦀
+# 🚀 Monad volume bot in Rust 🦀
 
-🌟 Overview: Precision Volume Bot with Functional Architecture
+** 🌟 Overview: Precision Volume Bot with Functional Architecture **
 
-Monad Volume Bot is a real-time analytics tool that tracks volume changes and detects sudden increases in activity across the Monad ecosystem. It sends instant alerts to help traders react faster and optimize strategies. Monad, volume increase monad, Monad tools, Volume Bot Monad, Monad tool, Monad bot , Monad trading
-
+** Monad Volume Bot is a real-time analytics tool that tracks volume changes and detects sudden increases in activity across the Monad ecosystem. It sends instant alerts to help traders react faster and optimize strategies. Monad, volume increase monad, Monad tools, Volume Bot Monad, Monad tool, Monad bot , Monad trading **
+---
 ✨ Key Features
 
 Monadic Control Flow (ROP): Every operation returns an MResult<T>, allowing for clean, traceable failure propagation and simplified debugging.
@@ -24,7 +24,7 @@ Performance Metrics: Tracks trades executed, total volume, and uptime.
 
 🚨 If you wish to obtain the fully functional and tested version of this bot, capable of live operations, please contact me directly!
 
-➡️ Telegram: [Monader_Dev](https://t.me/Monader_Dev)
+** ➡️ Telegram: [Monader_Dev](https://t.me/Monader_Dev) **
 
 🏗️ Architecture
 
@@ -94,7 +94,7 @@ For access to the fully integrated, secure, and production-ready binaries and de
 
 🔥 For the complete, working version, message the developer! 🔥
 
-👉 Telegram: [Monader_Dev](https://t.me/Monader_Dev)
+** 👉 Telegram: [Monader_Dev](https://t.me/Monader_Dev) **
 
 📝 License
 
