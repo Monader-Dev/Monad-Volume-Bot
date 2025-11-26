@@ -60,7 +60,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/monader-dev/monad-volume-bot.git
-cd monadic-hft-bot
+cd monad-volume-bot
 ```
 
 Set optional environment variables:
@@ -92,11 +92,8 @@ This repository contains the source code structure and logic. For fully integrat
 
 ---
 
-## 📝 License
-
-MIT License – see LICENSE file for details.
-
----
+Contact: 
+**🔥 Telegram:** [Monader_Dev](https://t.me/Monader_Dev)
 
 ## 🙏 Acknowledgements
 
