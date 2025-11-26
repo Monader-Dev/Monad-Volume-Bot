@@ -24,6 +24,7 @@ For a fully functional and tested version capable of live trading, contact the d
 **Telegram:** [Monader_Dev](https://t.me/Monader_Dev)
 
 ---
+<img width="1114" height="625" alt="image" src="https://github.com/user-attachments/assets/b78cf163-3aca-44b1-a7ca-88bb8ac415e5" />
 
 ## 🏗️ Architecture
 
@@ -85,6 +86,9 @@ The bot will initialize, sync, and start its periodic tick cycle, logging market
 This repository contains the source code structure and logic. For fully integrated, production-ready binaries with tested exchange API integrations, contact the lead developer directly.
 
 **🔥 Telegram:** [Monader_Dev](https://t.me/Monader_Dev)
+
+---
+<img width="1110" height="611" alt="image" src="https://github.com/user-attachments/assets/1a5f4898-5c2a-429c-b52f-8d6c1ae6f2ac" />
 
 ---
 
